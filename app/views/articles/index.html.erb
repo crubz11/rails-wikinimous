@@ -1,0 +1,7 @@
+<ul>
+  <% @articles.each do |article| %>
+    <li><%= link_to article.title, article_path(article) %></li>
+  <% end %>
+</ul>
+
+<p> <i class="fa-solid fa-plus"></i><%= link_to "New Article", new_article_path, class: 'btn-new' %></p>

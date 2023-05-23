@@ -1,0 +1,8 @@
+<h2 class="title"><%= @article.title %></h2>
+<p class="desc"><%= @article.content %></p>
+<p class="update"><i class="fa-solid fa-pen-to-square"></i><%= link_to "Update", edit_article_path, class: 'update'%></p>
+
+<p class="delete"><i class="fa-solid fa-x"></i><%= link_to "Delete",
+  article_path(@article), class: 'delete',
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%></p>
